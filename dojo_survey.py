@@ -16,7 +16,7 @@ def result():
 	elif len(comment)<1:
 		flash("Comment could not be empty!")
 	elif len(comment)>120:
-		flash("Comment could not be !")
+		flash("Comment could not be longer than 120 characters!")
 	else:
 		return render_template('result.html',name = name,location = location, language = language, comment = comment)
 	return redirect('/')
